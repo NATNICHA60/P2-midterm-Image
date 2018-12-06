@@ -5,7 +5,7 @@
     android:id="@+id/mainLinearLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/lens"
+    android:background="@drawable/bg3"
     android:orientation="vertical"
     android:padding="20dip"
     >
@@ -16,6 +16,13 @@
         android:layout_width="fill_parent"
         android:layout_height="5dip" />
 
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="130dp"
+        android:background="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -28,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:textColor="#FFFFA500"
+            android:textColor="#ffffff"
             android:textIsSelectable="false"
             android:textSize="12sp" />
     </RelativeLayout>
@@ -58,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="do"
-                android:textColor="#FF0000"
+                android:textColor="#ffffff"
                 android:textIsSelectable="false"
                 android:textSize="12sp"
                 android:typeface="normal" />
@@ -82,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="do#"
-                android:textColor="#ffa52a2a"
+                android:textColor="#ffffff"
                 android:textIsSelectable="false"
                 android:textSize="12sp"
                 android:typeface="normal" />
@@ -106,7 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="re"
-                android:textColor="#ffffa500"
+                android:textColor="#ffffff"
                 android:textIsSelectable="false"
                 android:textSize="12sp"
                 android:typeface="normal" />
@@ -130,7 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="mib"
-                android:textColor="#ffcd853f"
+                android:textColor="#ffffff"
                 android:textIsSelectable="false"
                 android:textSize="12sp"
                 android:typeface="normal" />
@@ -154,7 +161,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="mi"
-                android:textColor="#ff00ced1"
+                android:textColor="#ffffff"
                 android:textIsSelectable="false"
                 android:textSize="12sp"
                 android:typeface="normal" />
@@ -178,7 +185,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="fa"
-                android:textColor="#ff5f9ea0"
+                android:textColor="#ffffff"
                 android:textIsSelectable="false"
                 android:textSize="12sp"
                 android:typeface="normal" />
@@ -202,7 +209,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="fa#"
-                android:textColor="#ffdaa520"
+                android:textColor="#ffffff"
                 android:textIsSelectable="false"
                 android:textSize="12sp"
                 android:typeface="normal" />
@@ -226,7 +233,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="sol"
-                android:textColor="#ff0000ff"
+                android:textColor="#ffffff"
                 android:textIsSelectable="false"
                 android:textSize="12sp"
                 android:typeface="normal" />
@@ -250,7 +257,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="sol#"
-                android:textColor="#ff32cd32"
+                android:textColor="#ffffff"
                 android:textIsSelectable="false"
                 android:textSize="12sp"
                 android:typeface="normal" />
@@ -274,7 +281,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="la"
-                android:textColor="#ff7b68ee"
+                android:textColor="#ffffff"
                 android:textIsSelectable="false"
                 android:textSize="12sp"
                 android:typeface="normal" />
@@ -298,7 +305,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="sib"
-                android:textColor="#ffff1493"
+                android:textColor="#ffffff"
                 android:textIsSelectable="false"
                 android:textSize="12sp"
                 android:typeface="normal" />
@@ -322,7 +329,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="si"
-                android:textColor="#ffee82ee"
+                android:textColor="#ffffff"
                 android:textIsSelectable="false"
                 android:textSize="12sp"
                 android:typeface="normal" />
@@ -331,9 +338,11 @@
 
     <ImageButton
         android:id="@+id/btnSetSoundGetChord"
-        android:layout_width="fill_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:background="@drawable/orange_button"
-        android:src="@android:drawable/ic_btn_speak_now" />
+        android:src="@android:drawable/ic_btn_speak_now"
+        android:layout_gravity="center_horizontal"
+        />
 
 </LinearLayout>

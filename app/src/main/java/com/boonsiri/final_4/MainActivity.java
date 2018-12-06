@@ -68,15 +68,14 @@ public class MainActivity extends Activity {
 
 	private Shader textGradient;
 
-	// private static String[] notas = { "C", "C#", "D", "Eb", "E", "F", "F#",
-	// "G", "G#", "A", "Bb", "B" };
-	private static int[] coresNotas = { Color.rgb(95, 158, 160),
-			Color.rgb(218, 165, 32), Color.rgb(0, 0, 255),
-			Color.rgb(50, 205, 50), Color.rgb(123, 104, 238),
-			Color.rgb(255, 20, 147), Color.rgb(238, 130, 238),
-			Color.rgb(255, 0, 0), Color.rgb(165, 42, 42),
-			Color.rgb(255, 165, 0), Color.rgb(205, 133, 63),
-			Color.rgb(0, 206, 209) };
+
+	private static int[] coresNotas = { Color.rgb(0, 0, 0),
+			Color.rgb(0, 0, 0), Color.rgb(0, 0, 0),
+			Color.rgb(0, 0, 0), Color.rgb(0, 0, 0),
+			Color.rgb(0, 0, 0), Color.rgb(0, 0, 0),
+			Color.rgb(0, 0, 0), Color.rgb(0, 0, 0),
+			Color.rgb(0, 0, 0), Color.rgb(0, 0, 0),
+			Color.rgb(0, 0, 0) };
 
 	private static String[] nomeAcordes = { "F", "F m", "F aum", "F dim", "F#",
 			"F# m", "F# aum", "F# dim", "G", "G m", "G aum", "G dim", "G#",
@@ -88,22 +87,11 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-//		this.optionsMenu = menu;
-//		MenuInflater inflater = this.getMenuInflater();
-//		inflater.inflate(R.menu.sound_recording_example2, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-//		switch (item.getItemId()) {
-//		case R.id.airport_menuRefresh:
-//			MenuItem refreshItem = optionsMenu
-//					.findItem(R.id.airport_menuRefresh);
-//			refreshItem.setActionView(R.layout.actionbar);
-//			// Complete with your code
-//			return true;
-//		}
 		return super.onOptionsItemSelected(item);
 	}
 
@@ -171,9 +159,6 @@ public class MainActivity extends Activity {
 	public void onClickHelp(View view) {
 
 		System.out.println("Help Clicado!!!!");
-		// MenuItem refreshItem = optionsMenu
-		// .findItem(R.id.help);
-		// refreshItem.setActionView(R.layout.actionbar);
 	}
 
 	@Override
@@ -233,21 +218,20 @@ public class MainActivity extends Activity {
 			System.out.println("Do in background!!!");
 
 			while (started) {
-				// Inicializando vari�veis para a grava��o
+
 				bufferSize = AudioRecord.getMinBufferSize(RECORDER_SAMPLERATE,
 						AudioFormat.CHANNEL_IN_MONO,
 						AudioFormat.ENCODING_PCM_16BIT);
-				// Instanciando array de bytes
+
 				byte data[] = new byte[bufferSize];
-				// Inicializando AudioRecord
+
 				recorder = new AudioRecord(MediaRecorder.AudioSource.MIC,
 						RECORDER_SAMPLERATE, RECORDER_CHANNELS,
 						RECORDER_AUDIO_ENCODING, bufferSize);
 
-				// Inicializando the ByteArrayOutPutStream
+
 				ByteArrayOutputStream baos = null;
 				baos = new ByteArrayOutputStream();
-				// Verificando Status do objeto recorder
 				int i = recorder.getState();
 				if (i == 1) {
 					recorder.startRecording();
@@ -296,9 +280,7 @@ public class MainActivity extends Activity {
 			float energy = myfft.getEnergy();
 			pbEnergy.setProgress((int) ((100*(energy/minEnergy))));
 			
-			//0.4 = 80Db
 			if (energy > minEnergy) {
-				// Reordenando as notas nas barras de energia
 				float[] valores = new float[12];
 				for (int l = 0; l < S1.length; l++) {
 					valores[l] = S1[(l + 7) % S1.length];
@@ -310,7 +292,6 @@ public class MainActivity extends Activity {
 					barraCores[i].setProgress(ampli);
 				}
 
-				// Setando valores na tela
 				int numAcorde = myfft.getAcorde();
 				chordTV.setText(nomeAcordes[numAcorde]);
 				textGradient = new LinearGradient(0, 0, 0, 250,
